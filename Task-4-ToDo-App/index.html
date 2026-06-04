@@ -1,78 +1,27 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>ToDo App</title>
-
-<style>
-
-body{
-font-family:Arial;
-background:#f4f4f4;
-text-align:center;
-padding:40px;
-}
-
-.container{
-background:white;
-padding:20px;
-border-radius:10px;
-max-width:400px;
-margin:auto;
-}
-
-input{
-width:70%;
-padding:10px;
-}
-
-button{
-padding:10px;
-background:green;
-color:white;
-border:none;
-cursor:pointer;
-}
-
-li{
-margin:10px;
-}
-
-</style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Smart ToDo App</title>
+<link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
 <div class="container">
 
-<h1>ToDo App</h1>
+    <h1>📝 Smart ToDo App</h1>
 
-<input type="text" id="task">
+    <div class="input-box">
+        <input type="text" id="taskInput" placeholder="Enter a task">
+        <button onclick="addTask()">Add</button>
+    </div>
 
-<button onclick="addTask()">Add</button>
-
-<ul id="list"></ul>
+    <ul id="taskList"></ul>
 
 </div>
 
-<script>
-
-function addTask(){
-
-let task=document.getElementById("task").value;
-
-if(task==="") return;
-
-let li=document.createElement("li");
-
-li.innerText=task;
-
-document.getElementById("list").appendChild(li);
-
-document.getElementById("task").value="";
-
-}
-
-</script>
+<script src="script.js"></script>
 
 </body>
 </html>
